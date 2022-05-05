@@ -1,0 +1,187 @@
+html, body {
+    background-color: black;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+#div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+/*****************************************************************************************************/
+/* Palkit.                                                                                           *         
+/*****************************************************************************************************/
+
+.imgPalkki {
+    width: 75%;
+    height: 100%;
+}
+  
+.pPalkki {
+    display: inline-block;
+    width: 10%;
+    height: 100%;
+    margin-top:0;
+    margin-bottom:0;
+    position: absolute;
+    margin-left: -10%;
+    animation: 5s infinite alternate moveBackAndFront; 
+}
+  
+@keyframes moveBackAndFront {
+  
+    from {
+       left: 0%; 
+    }
+    
+    to {
+      left: 120%;
+      filter: invert(1) sepia(0) saturate(4) hue-rotate(111deg);
+    }
+}
+/*****************************************************************************************************/
+/* Pöllö.                                                                                            *         
+/*****************************************************************************************************/
+
+.pPolloVasenYla {
+	z-index: 100;
+	left: 0%;
+	top: 0%;
+	position: absolute;
+    animation: 4s infinite alternate pollonLiikeVasenYla linear; 
+}
+.pPolloVasenAla {
+	z-index: 100;
+	left: 0%;
+	top: 0%;
+	position: absolute;
+    animation: 4s infinite alternate pollonLiikeVasenAla linear; 
+}
+
+.pPolloOikeaYla {
+	z-index: 100;
+	left: 0%;
+	top: 0%;
+	position: absolute;
+    animation: 4s infinite alternate pollonLiikeOikeaYla linear; 
+}
+
+.pPolloOikeaAla {
+	z-index: 100;
+	left: 0%;
+	top: 0%;
+	position: absolute;
+    animation: 4s infinite alternate pollonLiikeOikeaAla linear; 
+}
+
+@keyframes pollonLiikeOikeaYla {
+    from {
+        left: calc(0%);
+	    top:  calc(0%);
+    }
+    to {
+        left: calc(45%);
+        top: calc(-30%);
+ }
+}
+@keyframes pollonLiikeOikeaAla {
+    from {
+        left: calc(0%);
+	    top:  calc(0%);
+    }
+    to {
+        left: calc(45%);
+        top: calc(30%);
+ }
+}
+      
+@keyframes pollonLiikeVasenYla {
+    from {
+        left: calc(0%);
+	    top:  calc(0%);
+    }
+    to {
+        left: calc(-45%);
+        top:  calc(-30%);
+ }
+}
+@keyframes pollonLiikeVasenAla {
+    from {
+        left: calc(0%);
+	    top:  calc(0%);
+    }
+    to {
+        left: calc(-45%);
+        top:  calc(30%);
+ }
+}
+/*****************************************************************************************************/
+/* Pingut.                                                                                           *         
+/*****************************************************************************************************/
+
+.imgPinguVasen {
+    width: 100%;
+}
+.imgPinguOikea {
+    width: 100%;
+}
+
+.pPinguVasen {
+	position: absolute;
+	z-index: -2;
+	left: 0%;
+	top: 0%;
+	animation: 5s infinite normal pingu1animation linear; 
+}
+
+.pPinguOikea {
+	position: absolute;
+	z-index: -2;
+	left: calc(100% - 150px);
+	top: calc(100% - 150px);
+	animation: 5s infinite normal pingu2animation linear; 
+}
+
+@keyframes pingu1animation {
+ 0% {}
+ 25% {
+   left: calc(100%/2 - 75px);
+   top: calc(100% - 150px);
+ }
+ 50% {
+   left: calc(100% - 150px);
+   top: calc(0%);
+  }
+ 75% {
+   left: calc(100%/2 - 75px);
+   top: calc(100% - 150px);
+ }
+ 100% {
+   left: 0%;
+   top: 0%;
+ }
+}
+
+@keyframes pingu2animation {
+ 0% {}
+ 25% {
+   left: calc(100%/2 - 75px);
+   top: calc(0%);
+ }
+ 50% {
+   left: calc(0%);
+   top: calc(100% - 150px);
+  }
+ 75% {
+   left: calc(100%/2 - 75px);
+   top: calc(0%);
+ }
+ 100% {
+   left: calc(100% - 150px);
+   top: calc(100% - 150px);
+ }
+}
